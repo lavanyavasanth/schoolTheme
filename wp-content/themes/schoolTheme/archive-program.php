@@ -1,6 +1,6 @@
 <?php get_header(); ?>
-    <main>
-        <a href="/blog">
+    
+        <a href="<?php echo site_url('/blog'); ?>">
             <h2 class="page-heading">All programs</h2>
         </a>
         <section>

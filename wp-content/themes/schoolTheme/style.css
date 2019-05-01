@@ -343,7 +343,7 @@ footer #social-media ul li a .chaty:hover{
     box-shadow: none;
 }
 #sidebar{
-    background: #333;
+    background: rgb(238, 216, 216);
     flex: 1;
     padding: 8px 16px;
     color: white;
@@ -356,7 +356,7 @@ footer #social-media ul li a .chaty:hover{
 @media (max-width: 900px){
     nav ul{
         display: none;
-    }
+    } 
     #menu-icon{
         display: flex;
     }
