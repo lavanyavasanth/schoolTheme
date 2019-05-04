@@ -18,12 +18,8 @@
                  </div>
              </section>
 <?php } ?>
-             <aside id="sidebar">
-                    <h3>Side Heading</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, explicabo.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, explicabo.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, explicabo.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, explicabo.</p>
+            <aside id="sidebar">
+                <?php dynamic_sidebar('main_sidebar'); ?>
             </aside>
          </div>
     <?php get_footer(); ?>

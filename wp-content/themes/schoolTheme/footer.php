@@ -4,11 +4,12 @@
                     <h3>Quick Links</h3>
                     <p>
                         <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="blog.html">Blog</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="academic.html">Academics</a></li>
-                            <li><a href="admission.html">Admission</a></li>
+                            <li><a href="<?php echo site_url(''); ?>">Home</a></li>
+                            <li><a href="<?php echo site_url('/blog'); ?>">Blog</a></li>
+                            <li><a href="<?php echo site_url('/about'); ?>" >About</a></li>
+                            <li><a href="<?php echo site_url('/programs'); ?>">Programs</a></li>
+                            <li><a href="<?php echo site_url('/admission'); ?>">Admission</a></li>
+                            li><a href="<?php echo site_url('/contact'); ?>">Contact US</a></li>
                         </ul>
                     </p>
                 </div>

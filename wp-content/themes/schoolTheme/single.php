@@ -8,8 +8,10 @@ while(have_posts()){
                  <div class="card">
                     <div class="card-meta">
                         Posted by <? the_author(); ?> on 
-                        <?php the_time('F j, Y') ?> in 
-                        <a href="#"><?php echo get_the_category_list(', ') ?></a>
+                        <?php the_time('F j, Y') ?> 
+                        <?php if(get_post_type()=='post'){ ?>
+                        in <a href="#"><?php echo get_the_category_list(', ') ?></a>
+                        <?php } ?>
                     </div>
                      <div class="card-image">
                          <img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>" alt="">
@@ -25,11 +27,11 @@ while(have_posts()){
 
                         'author' =>
                            '<input placeholder="Name" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
-                          '" size="30"' . $aria_req . ' /></p>',
+                          '" size="30"' . $aria_req . ' />',
                       
                         'email' =>
                           '<input placeholder="Email" id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .
-                          '" size="30"' . $aria_req . ' /></p>',
+                          '" size="30"' . $aria_req . ' />',
                       
                       );
 
@@ -66,8 +68,7 @@ while(have_posts()){
              </section>
 <?php } ?>
              <aside id="sidebar">
-                    <h3>Side Heading</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, explicabo.</p>
+                    <?php dynamic_sidebar('main_sidebar'); ?>
             </aside>
          </div>
 <?php get_footer(); ?>

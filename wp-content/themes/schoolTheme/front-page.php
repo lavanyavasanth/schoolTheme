@@ -4,9 +4,9 @@
         <h3>Dedicated to Excellence</h3>
     </div>
     <main>
-        <a href="/blog">
+        
             <h2 class="section-heading">All Blogs</h2>
-        </a>
+        
         <section>
         <?php
         $args = array(

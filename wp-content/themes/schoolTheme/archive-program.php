@@ -1,8 +1,8 @@
 <?php get_header(); ?>
     
-        <a href="<?php echo site_url('/blog'); ?>">
+        
             <h2 class="page-heading">All programs</h2>
-        </a>
+        
         <section>
         <?php
             while(have_posts()){

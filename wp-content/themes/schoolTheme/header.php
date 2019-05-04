@@ -14,18 +14,15 @@
                     <li><a href="<?php echo site_url('/about'); ?>">About</a></li>
                     <li><a href="<?php echo site_url('/programs'); ?>">Programs</a></li>
                     <li><a href="<?php echo site_url('/admission'); ?>">Admission</a></li>
-                    <li>
-                        <input type="text" placeholder="search here">
-                        <!-- <br>
-                        <a href="#">
-                            <i class="fas fa-search"></i>
-                        </a> -->
-                    </li>
+                    <li><a href="<?php echo site_url('/contact'); ?>">Contact US</a></li>
+                    <div class="searchbox-slide-menu">
+                        <?php get_search_form(); ?>
+                    </div>
                 </ul>
     </div>
     <nav>
         <div id="logo">
-            <a href="index.html">
+            <a href="<?php echo site_url(''); ?>">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="logo">
             </a>
         </div>
@@ -38,6 +35,7 @@
             <li><a href="<?php echo site_url('/about'); ?>" <?php if(is_page('about')) echo 'class = "active"' ?>>About</a></li>
             <li><a href="<?php echo site_url('/programs'); ?>"<?php if(get_post_type() == 'program') echo 'class = "active"' ?>>Programs</a></li>
             <li><a href="<?php echo site_url('/admission'); ?>"<?php if(is_page('admission')) echo 'class = "active"' ?>>Admission</a></li>
+            <li><a href="<?php echo site_url('/contact'); ?>"<?php if(is_page('contact')) echo 'class = "active"' ?>>Contact US</a></li>
             <li>
                 <div id="search-icon">
                     <i class="fas fa-search"></i>
@@ -46,7 +44,7 @@
         </ul>
     </nav>
     <div id="searchbox">
-            <input type="text" placeholder="search here">
+        <?php get_search_form(); ?> 
     </div>
     <?php if(!is_front_page()){?>
     <main>
